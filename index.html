@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="storage/img/spotify1.png">
     <script src="./js/main.js" type="module" defer></script>
+    <script src="./js/script.js" defer></script>
     <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
 
@@ -47,7 +49,7 @@
     </aside>
 
     <!-- COLUMNA CENTRAL -->
-    <main>
+    <main class="centro">
         <header class="mainEncabezado">
             <div class="bienvenidos">
                 <h1>Welcome To Spotify</h1>
@@ -92,6 +94,10 @@
             <h5>Playing next</h5>
         </div>
         <div class="cancionLista">
+        </div>
+
+        <div class="icono-container">
+            <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
         </div>
     </section>
 </body>
