@@ -16,4 +16,230 @@ body{
     font-family: "Mukta", sans-serif;
     height: 100vh;
     overflow-y: hidden;
+
 }
+
+/* Parte izquierda */
+.album{
+    display: flex;
+    flex-direction: column;
+   gap: 0.7rem;
+  padding: 0.5rem;
+    width: 100%;
+}
+
+/* Apartado de busqueda y titulo */
+.albumDescubrir{
+    background-color: var(--color2);
+    width: 100%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: center;
+    padding: 2rem;
+}
+.albumDescubrir h1{
+    font-size: xx-large;    
+    color: var(--color3)
+}
+.albumBuscar{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  
+   
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+  }
+  
+  .input {
+    max-width: 190px;
+    height: 100%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #53535f;
+    caret-color: #f7f7f8;
+    color: #fff;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+  }
+  
+  .input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.16);
+  }
+  
+  .input:focus {
+    border: 2px solid #a970ff;
+    background-color: #0e0e10;
+  }
+  
+  .search__btn {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(42, 42, 45, 1);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search__btn:hover {
+    background-color: rgba(54, 54, 56, 1);
+  }
+
+/* Top exitos */
+.albumTop{
+    display: flex;
+    flex-direction: column;
+   background-color: var(--color2);
+   padding: 2rem;
+   border-radius: 1rem;
+   gap: 2rem;
+   color: var(--color3)
+}
+
+.albumSubtitulo{
+    display: flex;
+   flex-direction: row;
+  padding-left: 2rem;
+  padding-right: 2rem;
+   font-size: x-large;
+  justify-content: space-between;
+}
+
+.albumSemana{
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+.albumSemana{
+    display: flex;
+    gap: 1rem;
+}
+
+.albumGaleria{
+    display: flex;
+    justify-content: center;
+   /* padding: 0.5rem; */
+    gap: 1rem;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+
+    height: 200px;
+    /* display: flex; */
+    flex-direction: column;
+    /* padding-left: 2rem;
+    gap: 1.5rem; */
+    background-color: var(--color2);
+    border-radius: 1rem;
+    color: var(--color3)
+}
+
+/* you may like this section  */
+
+.albumTalVezTeGuste{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    gap: 1.5rem;
+    background-color: var(--color2);
+    border-radius: 1rem;
+    height: 200px;
+    color: var(--color3)
+
+}
+
+.albumTalVezTeGusteTitulo{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    
+}
+
+
+
+.albumTalVezTeGusteName :nth-child(2){
+    color:rgba(255, 255, 255, 0.479)
+
+}
+
+
+/* Segunda columna el centro  */
+
+main{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   gap: 1.5em;
+   background-color: var(--color2);
+   border-radius: 1rem;
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+   justify-content: center
+
+}
+
+.frame__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Columna de la derecha   */
+.cancion{
+    display: flex;
+    flex-direction: column;
+    
+  margin: 0.5rem;
+
+  padding: 0.5rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color2);
+    /* padding-left: 2rem; */
+  
+   
+  
+  
+}
+/* titulo */
+.cancionEncabezado{
+    padding-top: 2rem;
+    padding-left: 2rem;
+  
+   
+   
+   
+}
+.cancionEncabezado h3{
+    font-size: x-large;
+  
+}
+.cancionEncabezado h5{
+    padding-top: 2rem;
+    
+}
+
+.cancionReproduciendoSiguiente{
+    padding-left: 2rem;
+    font-size: large;
+
+}
+
