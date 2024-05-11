@@ -32,17 +32,22 @@ body{
 .albumDescubrir{
     background-color: var(--color2);
     width: 100%;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-self: center;
     padding: 2rem;
+    font-family: "Mukta", sans-serif;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
+
 .albumDescubrir h1{
     font-size: xx-large;    
     color: var(--color3)
+    
 }
+
 .albumBuscar{
     display: flex;
     gap: 1rem;
@@ -59,12 +64,12 @@ body{
   }
   
   .input {
-    max-width: 190px;
+    width: 290px;
     height: 100%;
     outline: none;
     font-size: 14px;
     font-weight: 500;
-    background-color: #53535f;
+    background-color: #ffffff;
     caret-color: #f7f7f8;
     color: #fff;
     padding: 7px 10px;
@@ -80,10 +85,57 @@ body{
   }
   
   .input:focus {
-    border: 2px solid #a970ff;
+    border: 2px solid #2b5e3c;
     background-color: #0e0e10;
   }
   
+
+  .inputt {
+    width: 400px;
+    height: 100%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #ffffff;
+    caret-color: #f7f7f8;
+    color: #fff;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+  }
+  
+  .inputt:hover {
+    border: 2px solid rgba(255, 255, 255, 0.16);
+  }
+  
+  .inputt:focus {
+    border: 2px solid #2b5e3c;
+    background-color: #0e0e10;
+  }
+
+
+
+  .search__bt {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(42, 42, 45, 1);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search__bt:hover {
+    background-color: rgba(54, 54, 56, 1);
+  }
+
+
   .search__btn {
     border: none;
     cursor: pointer;
@@ -100,6 +152,16 @@ body{
   .search__btn:hover {
     background-color: rgba(54, 54, 56, 1);
   }
+
+
+
+
+
+
+
+
+
+
 
 /* Top exitos */
 .albumTop{
