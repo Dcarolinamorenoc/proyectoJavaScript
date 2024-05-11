@@ -11,7 +11,7 @@
 body{
    background-color: black;
     display:grid;
-    grid-template-columns: 1fr 1.8fr 1fr;
+    grid-template-columns: 1.1fr 1.7fr 1fr;
     color: var(--color3);
     font-family: "Mukta", sans-serif;
     height: 100vh;
@@ -29,7 +29,7 @@ body{
 }
 
 /* Apartado de busqueda y titulo */
-.albumDescubrir{
+.albumDescubrir {
     background-color: var(--color2);
     width: 100%;
     display: flex;
@@ -40,13 +40,18 @@ body{
     font-family: "Mukta", sans-serif;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: 540px;
 }
+
 
 .albumDescubrir h1{
     font-size: xx-large;    
     color: var(--color3)
     
 }
+
 
 .albumBuscar{
     display: flex;
@@ -153,33 +158,27 @@ body{
     background-color: rgba(54, 54, 56, 1);
   }
 
-
-
-
-
-
-
-
-
-
-
 /* Top exitos */
 .albumTop{
     display: flex;
+    height: 310px;
+    margin-top: -20px;
     flex-direction: column;
-   background-color: var(--color2);
+   background-color: var(--color1);
    padding: 2rem;
    border-radius: 1rem;
    gap: 2rem;
    color: var(--color3)
+   
 }
 
 .albumSubtitulo{
     display: flex;
    flex-direction: row;
-  padding-left: 2rem;
+  padding-left: 0rem;
   padding-right: 2rem;
    font-size: x-large;
+   margin-top: -15px;
   justify-content: space-between;
 }
 
@@ -197,16 +196,10 @@ body{
 .albumGaleria{
     display: flex;
     justify-content: center;
-   /* padding: 0.5rem; */
-    gap: 1rem;
-    /* flex-direction: row; */
+    margin-top: -20px;
     flex-wrap: wrap;
-
-    height: 200px;
-    /* display: flex; */
+    min-height: 240px;
     flex-direction: column;
-    /* padding-left: 2rem;
-    gap: 1.5rem; */
     background-color: var(--color2);
     border-radius: 1rem;
     color: var(--color3)
