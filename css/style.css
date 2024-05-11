@@ -1,0 +1,19 @@
+@import url(variables.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+/* Colmunas principales del fondo de 3 la pagina */
+body{
+   background-color: black;
+    display:grid;
+    grid-template-columns: 1fr 1.8fr 1fr;
+    color: var(--color3);
+    font-family: "Mukta", sans-serif;
+    height: 100vh;
+    overflow-y: hidden;
+}

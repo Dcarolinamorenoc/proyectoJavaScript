@@ -3,10 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="storage/img/spotify1.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="storage/img/spotify.png">
+    
+    <script src="./js/main.js" type="module" defer></script>
     <title>Spotify</title>
 </head>
+
+
 <body>
-    
+    <!-- SECCIÓN ÁLBUM IZQUIERDA PRIMERA COLUMNA -->
+    <aside class="album">
+        <header class="albumDescubrir">
+            <h1>Descubrir<br> Nueva Música</h1>
+            <div class="albumBuscar">
+
+            </div>
+        </header>
+        <section class="albumTop">
+            <div class="albumSubtitulo">
+                <p>Top de Éxitos</p>
+                <div class="albumSemana">
+                    <h6>Semana</h6>
+
+                </div>
+            </div>
+            <div class="albumGaleria">
+            </div>
+        </section>
+        <section class="albumTalVezTeGuste">
+            <div class="albumTalVezTeGusteTitulo">
+                <h3>Tal vez te guste esto</h3>
+            </div>
+            <div class="albumGaleriaTalVezTeGuste">
+            </div>
+        </section>
+    </aside>
+
+    <!-- SECCIÓN CENTRAL IFRAME SPOTIFY -->
+    <main>
+        <header class="mainEncabezado">
+            <h3>Reproduciendo ahora</h3>
+        </header>
+        <div class="cajaMarco">
+            <mi-marco class="mainMarco" uri="spotify:track:1aKvZDoLGkNMxoRYgkckZG?si=c4beb7d14355486e&nd=1&dlsi=326a76409d064faa"></mi-marco>
+        </div>
+        <div class="albumBusquedaPrincipal">
+
+        </div>
+    </main>
+
+    <!-- SECCIÓN DERECHA LISTA DE CANCIONES -->
+    <section class="cancion">
+        <div class="cancionEncabezado">
+            <h3>Lista de Canciones</h3>
+        </div>
+        <div class="cancionBuscar">
+
+        </div>
+        <div class="cancionReproduciendoSiguiente">
+            <h5>Reproduciendo a continuación</h5>
+        </div>
+        <div class="cancionLista">
+        </div>
+    </section>
 </body>
+
 </html>
