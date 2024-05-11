@@ -110,6 +110,7 @@ body{
     border-bottom-left-radius: 7px;
     margin-right: 1px;
     transition: all .2s ease;
+    margin-top: 70px;
   }
   
   .inputt:hover {
@@ -134,6 +135,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
   }
   
   .search__bt:hover {
@@ -253,6 +255,36 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.bienvenidos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bienvenidos img {
+    width: 60px;
+    height: 60px;
+}
+
+.bienvenidos {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Agrega una animación llamada fadeIn */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); } /* Desde la opacidad 0 y un desplazamiento hacia arriba */
+    100% { opacity: 1; transform: translateY(0); } /* Hasta la opacidad 1 y sin desplazamiento */
+}
+
+
+.subti{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 
