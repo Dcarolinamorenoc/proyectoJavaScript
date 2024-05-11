@@ -4,3 +4,4 @@
 
 *Diseño a realizar: https://www.figma.com/community/file/1178206974820059749
 
+![](https://github.com/Dcarolinamorenoc/proyectoJavaScript/blob/main/storage/img/dise.png)
