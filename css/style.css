@@ -716,3 +716,14 @@ main{
     font-size: 20px;
 }
 
+.cancionLista{
+  display: flex;
+  display: flex;
+  flex-direction: column; /* Cambiado de 'row' a 'column' */
+  border: 1px solid blue;
+  margin-top: -20px;
+  width: 350px;
+  height: 130px;
+  margin-left: 5px;
+  overflow-y: auto;
+}
