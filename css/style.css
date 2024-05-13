@@ -491,7 +491,11 @@ main{
 .cancionReproduciendoSiguiente{
     padding-left: 2rem;
     font-size: large;
+    margin-top: -20px;
+}
 
+.cancionReproduciendoSiguiente h5{
+  font-size: 20px;
 }
 
 /* Default */
@@ -720,10 +724,28 @@ main{
   display: flex;
   display: flex;
   flex-direction: column; /* Cambiado de 'row' a 'column' */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin-top: -20px;
   width: 350px;
-  height: 130px;
+  height: 480px;
   margin-left: 5px;
   overflow-y: auto;
 }
+
+/* .songsSecondColum{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-right: 0.7rem;
+  width: 95%;
+  border-radius: 1rem;
+  margin-top: 10px;
+  align-items: center;
+  transition: padding 0.3s ease;
+
+}
+.songsSecondColum:hover{
+  background-color: #242424;
+  padding: 0.4rem;
+  cursor: pointer;
+} */
