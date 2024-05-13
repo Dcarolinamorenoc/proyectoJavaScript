@@ -348,7 +348,6 @@ body{
     background-color: var(--color2);
     border-radius: 1rem;
     height: 200px;
-    border: 1px solid red;
     color: var(--color3)
 
 }
@@ -369,12 +368,13 @@ body{
 
 .seccionGUstar {
   display: flex;
-  border: 1px solid blue;
+  flex-direction: column; /* Cambiado de 'row' a 'column' */
   margin-top: -20px;
   width: 350px;
   height: 130px;
   margin-left: -5px;
-
+  align-items: center;
+  overflow-y: auto; /* Cambiado de 'hidden' a 'auto' para habilitar el desplazamiento vertical */
 }
 
 
@@ -386,10 +386,10 @@ body{
   padding-right: 0.7rem;
   width: 95%;
   border-radius: 1rem;
+  margin-top: 10px;
+  align-items: center;
   transition: padding 0.3s ease;
- 
- 
- 
+
 }
 .album__mayLikeSongs:hover{
   background-color: #242424;
@@ -399,6 +399,7 @@ body{
       
 
 }
+
 
 
 /* Segunda columna el centro  */
