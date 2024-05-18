@@ -1,24 +1,38 @@
 import "./modules/left.js"
+import"./modules/buscadores.js"
 
-class myframe extends HTMLElement{
-    id
-    constructor(id){
+class myframe extends HTMLElement {
+    constructor() {
         super();
-        this.attachShadow({mode: "open"});
+        this.attachShadow({ mode: "open" });
     }
-    connectedCallback(){
-        this.shadowRoot.innerHTML = /*html*/`
-            <iframe class="spotify-iframe" width="350" height="370" src="https://open.spotify.com/embed/track/${this.id}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-           
-        `
-        
+
+    connectedCallback() {
+        this.renderFrame();
     }
-    static get observedAttributes(){
+
+    renderFrame() {
+        const uri = this.getAttribute('uri');
+        if (uri) {
+            const id = uri.split(':')[2];
+            const typeOf = uri.split(':')[1];
+            this.shadowRoot.innerHTML = `
+                <iframe class="spotify-iframe" width="100%" height="500" src="https://open.spotify.com/embed/${typeOf}/${id}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            `;
+        } else {
+            this.shadowRoot.innerHTML = '';
+        }
+    }
+
+    static get observedAttributes() {
         return ["uri"];
     }
-    attributeChangedCallback(name,old,now){
-        let[nameUri, album, id] = now.split(":")
-        this.id = id;
+
+    attributeChangedCallback(name, oldVal, newVal) {
+        if (name === 'uri' && oldVal !== newVal) {
+            this.renderFrame();
+        }
     }
 }
-customElements.define("my-frame",myframe)
+
+customElements.define("my-frame", myframe);
