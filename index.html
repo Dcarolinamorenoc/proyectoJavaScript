@@ -23,7 +23,7 @@
             <h1>New Music</h1>
             </div>
             <div class="albumBuscar">
-              <input placeholder="Which album do you want to hear?" class="input" name="text" type="text" />
+              <input placeholder="Which album do you want to hear?" id="left_input" class="input" name="text" type="text" />
             </div>
             <section class="albumTop">
                 <div class="albumSubtitulo">
@@ -68,6 +68,20 @@
                       </div>
                   </div>    
               </section>
+              <section class="album_mainBox">
+                <div class="album_images">
+                    <div class="album_Content">
+                        <album-pictures index="2"></album-pictures>
+                        <h2><album-titles index = "2"></album-titles></h2>
+                    </div>
+                </div>
+                <div class="album_images2">
+                    <div class="album_Content">
+                        <album-pictures index="3"></album-pictures>
+                        <h2><album-titles index = "3"></-titles></h2>
+                    </div>
+                </div>    
+            </section>
               <!-- <section class="album_mainBox">
                 <div class="album_images">
                     <div class="album_Content">
@@ -97,75 +111,12 @@
         <section class="albumTalVezTeGuste">
             <div class="albumTalVezTeGusteTitulo">
                 <h3>You May Like</h3>
+                <section class="left_youMayLikeList">
+                  <div class="left_youMayLikeListBoxes">
+                      <may-like></may-like>
+                  </div>
             </div>
-            <div class="albumGaleriaTalVezTeGuste">
-              <div class="seccionGUstar">
-                <!-- <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/02wk5BttM0QL38ERjLPQJB?si=aa7b389a986a49fc&nd=1&dlsi=57dff475abd9489c" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/6M8horg7h52MPTxY0I3dQJ" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/0vkcyC4KUteZGNYAzTLSv0" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/6ylDpki1VpIsc525KC1ojF" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/1WbhIxkn5ECsOwUm795iX1" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/2i2gDpKKWjvnRTOZRhaPh2" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/4VrWlk8IQxevMvERoX08iC" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/6dgUya35uo964z7GZXM07g" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/5u5MvmVtitax9R1Mxh3reC" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/7DSAEUvxU8FajXtRloy8M0" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-
-                <div class="album__mayLikeSongs">
-
-                  <iframe src="https://open.spotify.com/embed/track/5aIVCx5tnk0ntmdiinnYvw" width="100%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div> -->
-
-            
-
-  
-            </div>
-            </div>
+              </section>
         </section>
     </aside>
 
