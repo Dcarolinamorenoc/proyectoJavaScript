@@ -80,11 +80,48 @@ body{
 
 .albumBuscar{
     display: flex;
+    /* border: 1px solid red; */
     gap: 1rem;
     align-items: center;
   
    
 }
+
+/* ------------- Componente del input ---------------- */
+
+  .input {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+  }
+  
+  .input:focus {
+    animation: rotateShadow 2s infinite linear;
+  }
+  
+  @keyframes rotateShadow {
+    0% {
+      box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
+    }
+    25% {
+      box-shadow: -2px 2px 8px 1px #66d88c, 2px -2px 8px 1px #2b682e;
+    }
+    50% {
+      box-shadow: 2px 2px 8px 1px #66d88c, -2px -2px 8px 1px #2b682e;
+    }
+    75% {
+      box-shadow: 2px -2px 8px 1px #66d88c, -2px 2px 8px 1px #2b682e;
+    }
+    100% {
+      box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
+    }
+  }
+
+  
 
 .container {
     display: flex;
@@ -94,59 +131,8 @@ body{
     margin-top: -20px;
   }
   
-  .input {
-    width: 290px;
-    height: 100%;
-    outline: none;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #ffffff;
-    caret-color: #f7f7f8;
-    color: #fff;
-    padding: 7px 10px;
-    border: 2px solid transparent;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    margin-right: 1px;
-    transition: all .2s ease;
-  }
-  
-  .input:hover {
-    border: 2px solid rgba(255, 255, 255, 0.16);
-  }
-  
-  .input:focus {
-    border: 2px solid #2b5e3c;
-    background-color: #0e0e10;
-  }
-  
 
-  .inputt {
-    width: 400px;
-    height: 100%;
-    outline: none;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #ffffff;
-    caret-color: #f7f7f8;
-    color: #fff;
-    padding: 7px 10px;
-    border: 2px solid transparent;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    margin-right: 1px;
-    transition: all .2s ease;
-    margin-top: 70px;
-  }
   
-  .inputt:hover {
-    border: 2px solid rgba(255, 255, 255, 0.16);
-  }
-  
-  .inputt:focus {
-    border: 2px solid #2b5e3c;
-    background-color: #0e0e10;
-  }
 
 
 

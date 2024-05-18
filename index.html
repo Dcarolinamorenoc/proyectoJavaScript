@@ -23,14 +23,7 @@
             <h1>New Music</h1>
             </div>
             <div class="albumBuscar">
-                <div class="container">
-                    <input type="text" name="text" class="input" placeholder="Search songs">
-                    <button class="search__btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
-                        <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
-                      </svg>
-                    </button>
-                  </div>
+              <input placeholder="Which album do you want to hear?" class="input" name="text" type="text" />
             </div>
             <section class="albumTop">
                 <div class="albumSubtitulo">
@@ -60,66 +53,22 @@
                     </div> -->
                 </div>
             </section>
-            <div class="albumGaleria">
-
-              <div class="album__songs">
-                    
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2fYhqwDWXjbpjaIJPEfKFw" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2ODvWsOgouMbaA5xf0RkJe" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1WVIJaAboRSwJOe4u0n0Q7" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5VoeRuTrGhTbKelUfwymwu" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3PomvFR694SrCSZzDWMWV7" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1WfIjwnJ0aHiWCSkeSSeuV" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5pSk3c3wVwnb2arb6ohCPU" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1NAmidJlEaVgA3MpcPFYGq" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-           
-            </div>
-
-            <div class="album__songs">
-                
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0rc8MShj37cLImmPbUt8Pq" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-         
+            <div class="left_albumsPosition">
+              <section class="left_baseAlbum">
+                  <div class="left_album">
+                      <div class="left_albumContent">
+                          <album-images index="0"></album-images>
+                          <h2><song-titles index="0"></song-titles></h2>
+                      </div>
+                  </div>
+                  <div class="left_album2">
+                      <div class="left_albumContent">
+                          <album-images index="1"></album-images>
+                          <h2><song-titles index="1"></song-titles></h2>
+                      </div>
+                  </div>
+              </section>
           </div>
-
-          <div class="album__songs">
-              
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1v0new1LT7TVddV7dBIAmo" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-         
-          </div>
-            </div>
         </header>
         <section class="albumTalVezTeGuste">
             <div class="albumTalVezTeGusteTitulo">
@@ -231,7 +180,7 @@
         <div class="cancionBuscar">
             <div class="container">
                 <input type="text" name="text" class="input" placeholder="Search Songs">
-                <button class="search__btn">
+                <button class="search__btn" >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
                     <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
                   </svg>
