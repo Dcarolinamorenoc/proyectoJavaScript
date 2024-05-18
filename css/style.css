@@ -121,14 +121,17 @@ body{
     }
   }
 
-  
+
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid purple; */
     height: 35px;
     margin-top: -20px;
+    width: 150%;
   }
   
 
@@ -504,13 +507,13 @@ body{
 main{
     display: flex;
     flex-direction: column;
-   align-items: center;
-   gap: 1.5em;
-   background-color: var(--color2);
-   border-radius: 1rem;
-   margin-top: 0.5rem;
-   margin-bottom: 0.5rem;
-   justify-content: center
+    align-items: center;
+    gap: 1.5em;
+    background-color: var(--color2);
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: center
 
 }
 
@@ -529,13 +532,22 @@ main{
 }
 
 .bienvenidos img {
-    width: 60px;
-    height: 60px;
+    width: 9%;
+    height: 9%;
 }
 
 .bienvenidos {
     text-align: center;
     animation: fadeIn 2s ease-in-out; /* Agrega una animación llamada fadeIn */
+}
+
+
+.albumBusquedaPrincipal{
+  display: flex;
+  /* border: 1px solid green; */
+  width: 70%;
+  height: 2%;
+  margin-top: 2%;
 }
 
 @keyframes fadeIn {

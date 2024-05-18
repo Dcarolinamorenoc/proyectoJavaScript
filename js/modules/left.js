@@ -16,8 +16,8 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'c62248404amsh7c48cf70d45bb8ep1550b3jsn37fe5e39063b',
-                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                // 'X-RapidAPI-Key': 'c62248404amsh7c48cf70d45bb8ep1550b3jsn37fe5e39063b',
+                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
 
@@ -47,9 +47,59 @@ class AlbumPictures extends HTMLElement {
             }
         } catch (error) {
             console.error(error);
-            this.innerHTML = `<p>Error loading albums</p>`;
+            this.innerHTML = `<p>Error with the albums      </p>`;
         }
     }
 }
 
 customElements.define('album-pictures', AlbumPictures);
+
+
+
+
+// TITLES
+
+class AlbumTitles extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    async connectedCallback() {
+        const index = parseInt(this.getAttribute('index')) || 0;
+        this.loadSongs('coldplay', index);
+    }
+
+    async loadSongs(searchTerm, index) {
+        const codeBase = searchTerm.replace(/\s/g, '%20');
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${codeBase}&type=albums&offset=0&limit=10&numberOfTopResults=5`;
+        const options = {
+            method: 'GET',
+            headers: {
+                // 'X-RapidAPI-Key': 'c62248404amsh7c48cf70d45bb8ep1550b3jsn37fe5e39063b',
+                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+            }
+        };
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+
+            if (result.albums.items.length > index) {
+                const albumData = result.albums.items[index].data;
+                if (albumData) {
+                    const albumTitle = albumData.name;
+                    this.innerHTML = `
+                        <h2>${albumTitle}</h2>
+                    `;
+                }
+            } else {
+                this.innerHTML = `<p>No results found</p>`;
+            }
+        } catch (error) {
+            console.error(error);
+            this.innerHTML = `<p>Error loading titles</p>`;
+        }
+    }
+}
+
+customElements.define('album-titles', AlbumTitles);
