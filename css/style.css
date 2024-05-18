@@ -172,6 +172,109 @@ body{
     background-color: rgba(54, 54, 56, 1);
   }
 
+
+/* ----------------------------- Albums parte izquierda ------------------------------ */
+
+.album_box{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 350vh;
+  width: 100%;
+}
+
+.album_mainBox{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid purple; */
+  width: 100%;
+  justify-content: baseline;
+  align-items: center;
+  height: 25vh;
+  margin-top: 3%;
+}
+
+.album_mainBox:hover{
+  cursor: pointer;
+}
+
+.album_images2{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid purple; */
+  width: 100%;
+  justify-content: baseline;
+  align-items: center;
+  height: 25vh;
+  margin-top: 4%;
+}
+
+.album_Content:hover{
+  cursor: pointer;
+  border-radius: 5%;
+  transform: scale(0.95);
+}
+
+.album_images2:hover{
+  cursor: pointer;
+}
+
+.album_images{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid lightblue; */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  width: 40%;
+  height: 25vh;
+  margin-left: 7%;
+}
+
+.album_images2{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid lightblue; */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  width: 40%;
+  height: 25vh;
+  margin-left: 6%;
+}
+
+.album_Content{
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.album_Content img{
+  display: flex;
+  width: 100%;
+  height: 50%;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.album_Content h2{
+  display: flex;
+  font-size: 100%;
+  align-items: center;
+  height: 70%;
+  width:100%;
+  margin-top: 3%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+
+
 /* Top exitos */
 .albumTop{
     display: flex;

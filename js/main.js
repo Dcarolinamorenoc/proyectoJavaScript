@@ -1,3 +1,5 @@
+import "./modules/left.js"
+
 class myframe extends HTMLElement{
     id
     constructor(id){
