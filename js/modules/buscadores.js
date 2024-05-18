@@ -7,7 +7,7 @@ class AlbumFilter extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <style>
         .input {
-            width: 230%;
+            width: 175%;
             background-color: #1a1a1a;
             border: none;
             padding: 10px;
