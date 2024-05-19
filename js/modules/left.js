@@ -16,7 +16,7 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '8b10b3432fmsh1d870176f64ffffp1e8efbjsnad29e1f1b690',
+                // 'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
                 // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };

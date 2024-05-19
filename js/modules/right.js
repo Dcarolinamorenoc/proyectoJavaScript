@@ -1,11 +1,14 @@
 
-class TrackList extends HTMLElement {
+class SongsTracklist extends HTMLElement {
     constructor() {
         super();
     }
 
     connectedCallback() {
         this.renderFrame();
+        document.querySelector('my-frame').addEventListener('uri-changed', (event) => {
+            this.setAttribute('uri', event.detail.uri);
+        });
     }
 
     async renderFrame() {
@@ -21,7 +24,7 @@ class TrackList extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '8b10b3432fmsh1d870176f64ffffp1e8efbjsnad29e1f1b690',
+                'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
                 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
@@ -82,37 +85,10 @@ class TrackList extends HTMLElement {
             this.renderFrame();
         }
     }
-
-    updateTracks(tracks) {
-        let templates = '';
-        tracks.forEach(track => {
-            const imageUrl = track.albumOfTrack.coverArt.sources[2].url;
-            const trackName = track.name;
-            const artistName = track.artists.items[0].profile.name;
-            const durationMs = track.duration.totalMilliseconds;
-            const minutes = Math.floor(durationMs / 60000);
-            const seconds = Math.floor((durationMs % 60000) / 1000).toString().padStart(2, '0');
-
-            templates += `
-                <div class="trackListBoxes">
-                    <div class="trackListImg">
-                        <img src="${imageUrl}" alt="trackList" data-uri="${track.uri}">
-                    </div>
-                    <div class="trackListDescription">
-                        <h3>${trackName}</h3>
-                        <p>${artistName}</p>
-                    </div>
-                    <div class="trackListTime">
-                        <h3>${minutes}:${seconds}</h3>
-                    </div>
-                </div>
-            `;
-        });
-        this.innerHTML = templates;
-    }
 }
 
-customElements.define('track-list', TrackList);
+customElements.define('track-list', SongsTracklist);
+
 
 
 

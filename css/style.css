@@ -657,6 +657,12 @@ main{
   width: 100%;
   height: 100%;
   border-radius: 10%; 
+  transition: transform 0.3s ease;
+}
+
+.trackListImg img:hover{
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
 

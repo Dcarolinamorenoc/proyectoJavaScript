@@ -76,8 +76,8 @@ class SearchSongs extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': '5aa420d87dmshc197fadf18d67fcp1fd32fjsn0387b24020eb',
-            'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+            // 'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
+            // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
 
@@ -189,7 +189,7 @@ class TrackSearch extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': '5aa420d87dmshc197fadf18d67fcp1fd32fjsn0387b24020eb',
+            'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
