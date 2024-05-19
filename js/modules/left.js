@@ -20,7 +20,7 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
+                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', 
                 // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
@@ -87,7 +87,7 @@ class AlbumTitles extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
+                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
                 // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
@@ -118,7 +118,7 @@ class AlbumTitles extends HTMLElement {
 
 customElements.define('album-titles', AlbumTitles);
 
-// Event listener for input to handle the "Enter" key
+
 document.getElementById('artistInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         const artistName = e.target.value;
@@ -133,7 +133,7 @@ document.getElementById('artistInput').addEventListener('keypress', function (e)
     }
 });
 
-// Load default albums for "The Weeknd" when the page loads
+
 window.addEventListener('load', () => {
     document.querySelectorAll('album-pictures').forEach((element) => {
         element.setArtistName('The Weeknd');
@@ -196,7 +196,7 @@ class MayLike extends HTMLElement {
             let allSongs = [];
             let selectedGenres = [];
 
-            // Selecciona aleatoriamente 6 géneros
+            
             while (selectedGenres.length < 6) {
                 const randomGenre = genres[Math.floor(Math.random() * genres.length)];
                 if (!selectedGenres.includes(randomGenre)) {
@@ -207,22 +207,22 @@ class MayLike extends HTMLElement {
             for (const genre of selectedGenres) {
                 const songs = await fetchSongsByGenre(genre);
                 if (songs && songs.length > 0) {
-                    allSongs.push(songs[Math.floor(Math.random() * songs.length)]); // Selecciona una canción aleatoria de cada género
+                    allSongs.push(songs[Math.floor(Math.random() * songs.length)]);
                 }
             }
 
             let templates = '';
             allSongs.forEach(track => {
                 const trackData = track.data;
-                // Primera URL de la portada del álbum
+
                 const primeraUrl = trackData.albumOfTrack.coverArt.sources[0].url;
-                // Nombre de la canción
+                
                 const nombre = trackData.name;
-                // Nombre del artista
+                
                 const artista = trackData.artists.items.map(artist => artist.profile.name).join(', ');
-                // Duración de la canción en milisegundos
+                
                 const durationMs = trackData.duration.totalMilliseconds;
-                // Convertir a minutos y segundos
+                
                 const minutes = Math.floor(durationMs / 60000);
                 const seconds = Math.floor((durationMs % 60000) / 1000).toString().padStart(2, '0');
 
