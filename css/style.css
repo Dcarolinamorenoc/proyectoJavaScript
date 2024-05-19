@@ -85,6 +85,7 @@ body{
     /* border: 1px solid red; */
     gap: 1rem;
     align-items: center;
+    justify-content: center;
   
    
 }
@@ -130,7 +131,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
     height: 35px;
     margin-top: -20px;
     width: 150%;
@@ -550,8 +551,8 @@ main{
   display: flex;
   /* border: 1px solid green; */
   width: 70%;
-  height: 2%;
-  margin-top: 2%;
+  height: 13%;
+  margin-top: 0%;
 }
 
 @keyframes fadeIn {
