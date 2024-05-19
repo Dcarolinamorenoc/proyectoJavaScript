@@ -82,30 +82,35 @@
                     </div>
                 </div>    
             </section>
-              <!-- <section class="album_mainBox">
-                <div class="album_images">
-                    <div class="album_Content">
-                        <album-pictures index="2"></album-pictures>
-                    </div>
-                </div>
-                <div class="album_images2">
-                    <div class="album_Content">
-                        <album-pictures index="3"></album-pictures>
-                    </div>
-                </div>    
-            </section>
             <section class="album_mainBox">
               <div class="album_images">
                   <div class="album_Content">
                       <album-pictures index="4"></album-pictures>
+                      <h2><album-titles index = "4"></album-titles></h2>
                   </div>
               </div>
               <div class="album_images2">
                   <div class="album_Content">
                       <album-pictures index="5"></album-pictures>
+                      <h2><album-titles index = "5"></-titles></h2>
                   </div>
               </div>    
-          </section> -->
+          </section>
+          <section class="album_mainBox">
+            <div class="album_images">
+                <div class="album_Content">
+                    <album-pictures index="6"></album-pictures>
+                    <h2><album-titles index = "6"></album-titles></h2>
+                </div>
+            </div>
+            <div class="album_images2">
+                <div class="album_Content">
+                    <album-pictures index="7"></album-pictures>
+                    <h2><album-titles index = "7"></-titles></h2>
+                </div>
+            </div>    
+        </section>
+              
           </div>
         </header>
         <section class="albumTalVezTeGuste">
@@ -132,7 +137,7 @@
                 <h3>Now Playing</h3>
             </div>
           <div class="frame__box">
-            <my-frame id="section_middleFrame" class="section_middleFrame" uri="spotify:album:04hy4jb1GDD00otiwzsFUB"></my-frame>
+            <my-frame id="section_middleFrame" class= "section_middleFrame" uri="spotify:album:1OARrXe5sB0gyy3MhQ8h92"></my-frame>
           </div>
         <search-songs></search-songs>
     </main>
@@ -142,76 +147,16 @@
         <div class="cancionEncabezado">
             <h3>Track List</h3>
         </div>
-        <div class="cancionBuscar">
-          <input placeholder="Which song do you want to hear?" class="input" name="text" type="text" />
-        </div>
+        <track-search></track-search>
         <div class="cancionReproduciendoSiguiente">
             <h5>Playing next</h5>
         </div>
-        <div class="cancionLista">
-          <!-- <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
-
-          <div class="songsSecondColum">
-
-            <iframe src="https://open.spotify.com/embed/track/0Q5VnK2DYzRyfqQRJuUtvi" width="95%" height="90px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div> -->
-
-
-        </div>
-
-        
-
+        <section class="trackBase">
+          <track-list id="trackList" class="trackList" uri="spotify:album:1OARrXe5sB0gyy3MhQ8h92"></track-list>
+        </section>
         <div class="icono-container">
-            <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
-        </div>
+          <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+      </div>
     </section>
 </body>
 

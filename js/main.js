@@ -1,5 +1,6 @@
 import "./modules/left.js"
-import"./modules/buscadores.js"
+import "./modules/buscadores.js"
+import "./modules/right.js"
 
 class myframe extends HTMLElement {
     constructor() {
@@ -31,8 +32,10 @@ class myframe extends HTMLElement {
     attributeChangedCallback(name, oldVal, newVal) {
         if (name === 'uri' && oldVal !== newVal) {
             this.renderFrame();
+            this.dispatchEvent(new CustomEvent('uri-changed', { detail: { uri: newVal } }));
         }
     }
 }
 
 customElements.define("my-frame", myframe);
+
