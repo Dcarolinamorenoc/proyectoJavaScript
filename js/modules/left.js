@@ -1,13 +1,16 @@
 
+// PORTADA ALBUMS
 
 class AlbumPictures extends HTMLElement {
     constructor() {
         super();
+        this.index = 0;
+        this.artistName = 'The Weeknd'; // Valor predeterminado
     }
 
     async connectedCallback() {
-        const index = parseInt(this.getAttribute('index')) || 0;
-        this.loadAlbums('The weeknd', index);
+        this.index = parseInt(this.getAttribute('index')) || 0;
+        this.loadAlbums(this.artistName, this.index);
     }
 
     async loadAlbums(lookFor, index) {
@@ -16,12 +19,8 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-<<<<<<< HEAD
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', 
-=======
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
->>>>>>> parent of 70dbc5e (feat: :construction: Clase para buscar por medio d einput)
-                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
+                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
 
@@ -54,38 +53,41 @@ class AlbumPictures extends HTMLElement {
             this.innerHTML = `<p>Error with the albums</p>`;
         }
     }
+
+    setArtistName(artistName) {
+        this.artistName = artistName;
+        this.loadAlbums(artistName, this.index);
+    }
 }
 
 customElements.define('album-pictures', AlbumPictures);
 
 
 
+// TITULOS ALBUMS
 
-// TITLES
+
 
 class AlbumTitles extends HTMLElement {
     constructor() {
         super();
+        this.index = 0;
+        this.artistName = 'The Weeknd'; // Valor predeterminado
     }
 
     async connectedCallback() {
-        const index = parseInt(this.getAttribute('index')) || 0;
-        this.loadSongs('coldplay', index);
+        this.index = parseInt(this.getAttribute('index')) || 0;
+        this.loadTitles(this.artistName, this.index);
     }
 
-    async loadSongs(lookFor, index) {
-        const codeBase = lookFor.replace(/\s/g, '%20');
-        const url = `https://spotify23.p.rapidapi.com/search/?q=${codeBase}&type=albums&offset=0&limit=10&numberOfTopResults=5`;
+    async loadTitles(lookFor, index) {
+        const mainCode = lookFor.replace(/\s/g, '%20');
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${mainCode}&type=albums&offset=0&limit=10&numberOfTopResults=5`;
         const options = {
             method: 'GET',
             headers: {
-<<<<<<< HEAD
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
+                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
                 // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-=======
-                'X-RapidAPI-Key': 'c62248404amsh7c48cf70d45bb8ep1550b3jsn37fe5e39063b',
-                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
->>>>>>> parent of 70dbc5e (feat: :construction: Clase para buscar por medio d einput)
             }
         };
 
@@ -96,25 +98,26 @@ class AlbumTitles extends HTMLElement {
             if (result.albums.items.length > index) {
                 const albumData = result.albums.items[index].data;
                 if (albumData) {
-                    const albumTitle = albumData.name;
-                    this.innerHTML = `
-                        <h2>${albumTitle}</h2>
-                    `;
+                    this.innerHTML = `${albumData.name}`;
                 }
             } else {
                 this.innerHTML = `<p>No results found</p>`;
             }
         } catch (error) {
             console.error(error);
-            this.innerHTML = `<p>Error loading titles</p>`;
+            this.innerHTML = `<p>Error with the titles</p>`;
         }
+    }
+
+    setArtistName(artistName) {
+        this.artistName = artistName;
+        this.loadTitles(artistName, this.index);
     }
 }
 
 customElements.define('album-titles', AlbumTitles);
 
-<<<<<<< HEAD
-
+// Event listener for input to handle the "Enter" key
 document.getElementById('artistInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         const artistName = e.target.value;
@@ -129,7 +132,7 @@ document.getElementById('artistInput').addEventListener('keypress', function (e)
     }
 });
 
-
+// Load default albums for "The Weeknd" when the page loads
 window.addEventListener('load', () => {
     document.querySelectorAll('album-pictures').forEach((element) => {
         element.setArtistName('The Weeknd');
@@ -140,8 +143,6 @@ window.addEventListener('load', () => {
 });
 
 
-=======
->>>>>>> parent of 70dbc5e (feat: :construction: Clase para buscar por medio d einput)
 
 
 // Funcion para el search
@@ -194,7 +195,7 @@ class MayLike extends HTMLElement {
             let allSongs = [];
             let selectedGenres = [];
 
-            
+            // Selecciona aleatoriamente 6 géneros
             while (selectedGenres.length < 6) {
                 const randomGenre = genres[Math.floor(Math.random() * genres.length)];
                 if (!selectedGenres.includes(randomGenre)) {
@@ -205,22 +206,22 @@ class MayLike extends HTMLElement {
             for (const genre of selectedGenres) {
                 const songs = await fetchSongsByGenre(genre);
                 if (songs && songs.length > 0) {
-                    allSongs.push(songs[Math.floor(Math.random() * songs.length)]);
+                    allSongs.push(songs[Math.floor(Math.random() * songs.length)]); // Selecciona una canción aleatoria de cada género
                 }
             }
 
             let templates = '';
             allSongs.forEach(track => {
                 const trackData = track.data;
-
+                // Primera URL de la portada del álbum
                 const primeraUrl = trackData.albumOfTrack.coverArt.sources[0].url;
-                
+                // Nombre de la canción
                 const nombre = trackData.name;
-                
+                // Nombre del artista
                 const artista = trackData.artists.items.map(artist => artist.profile.name).join(', ');
-                
+                // Duración de la canción en milisegundos
                 const durationMs = trackData.duration.totalMilliseconds;
-                
+                // Convertir a minutos y segundos
                 const minutes = Math.floor(durationMs / 60000);
                 const seconds = Math.floor((durationMs % 60000) / 1000).toString().padStart(2, '0');
 

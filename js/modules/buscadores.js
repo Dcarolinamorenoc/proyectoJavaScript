@@ -1,4 +1,4 @@
-// --------------------- INPUT PRINCIPAL  ---------------------------
+// INPUT PRINCIPAL
 
 
 class SearchSongs extends HTMLElement {
