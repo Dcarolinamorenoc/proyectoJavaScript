@@ -1,6 +1,3 @@
-
-// PORTADA ALBUMS
-
 class AlbumPictures extends HTMLElement {
     constructor() {
         super();
@@ -10,7 +7,7 @@ class AlbumPictures extends HTMLElement {
 
     async connectedCallback() {
         this.index = parseInt(this.getAttribute('index')) || 0;
-        this.loadAlbums(this.artistName, this.index);
+        await this.loadAlbums(this.artistName, this.index);
     }
 
     async loadAlbums(lookFor, index) {
@@ -19,7 +16,7 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
+                'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
                 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
@@ -40,9 +37,9 @@ class AlbumPictures extends HTMLElement {
 
                     this.querySelector('img').addEventListener('click', () => {
                         const myFrame = document.querySelector('my-frame');
-                        myFrame.setAttribute('uri', `spotify:album:${id}`);
-                        const AlbumTracksComponent = document.querySelector('.trackList');
-                        AlbumTracksComponent.setAttribute('uri', `spotify:album:${id}`);
+                        if (myFrame) {
+                            myFrame.setAttribute('uri', `spotify:album:${id}`);
+                        }
                     });
                 }
             } else {
@@ -63,9 +60,7 @@ class AlbumPictures extends HTMLElement {
 customElements.define('album-pictures', AlbumPictures);
 
 
-
-// TITULOS ALBUMS
-
+// TITULO ALBUMS
 
 
 class AlbumTitles extends HTMLElement {
@@ -77,7 +72,7 @@ class AlbumTitles extends HTMLElement {
 
     async connectedCallback() {
         this.index = parseInt(this.getAttribute('index')) || 0;
-        this.loadTitles(this.artistName, this.index);
+        await this.loadTitles(this.artistName, this.index);
     }
 
     async loadTitles(lookFor, index) {
@@ -86,8 +81,8 @@ class AlbumTitles extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120', // Tu clave aquí
-                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
+                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
 
@@ -117,7 +112,7 @@ class AlbumTitles extends HTMLElement {
 
 customElements.define('album-titles', AlbumTitles);
 
-// Event listener for input to handle the "Enter" key
+
 document.getElementById('artistInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         const artistName = e.target.value;
@@ -132,7 +127,6 @@ document.getElementById('artistInput').addEventListener('keypress', function (e)
     }
 });
 
-// Load default albums for "The Weeknd" when the page loads
 window.addEventListener('load', () => {
     document.querySelectorAll('album-pictures').forEach((element) => {
         element.setArtistName('The Weeknd');
@@ -141,6 +135,7 @@ window.addEventListener('load', () => {
         element.setArtistName('The Weeknd');
     });
 });
+
 
 
 

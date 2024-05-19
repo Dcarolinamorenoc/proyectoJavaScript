@@ -76,8 +76,8 @@ class SearchSongs extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-                // 'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
-                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                'X-RapidAPI-Key': '28cbfd1d3emsh1a81aa64dbc6f49p1a28d6jsn68b94c0af120',
+                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
 
