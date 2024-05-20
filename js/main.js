@@ -2,7 +2,7 @@ import "./modules/left.js"
 import "./modules/buscadores.js"
 import "./modules/right.js"
 
-class myframe extends HTMLElement {
+class MyFrame extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -37,5 +37,4 @@ class myframe extends HTMLElement {
     }
 }
 
-customElements.define("my-frame", myframe);
-
+customElements.define("my-frame", MyFrame);

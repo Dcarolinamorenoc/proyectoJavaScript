@@ -24,8 +24,8 @@ class SongsTracklist extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
-                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                // 'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
+                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
 
@@ -88,8 +88,5 @@ class SongsTracklist extends HTMLElement {
 }
 
 customElements.define('track-list', SongsTracklist);
-
-
-
 
 

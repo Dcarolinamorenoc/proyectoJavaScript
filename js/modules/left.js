@@ -16,7 +16,7 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '36328a7ef5msh51379a468a6c67bp1619bbjsnb801fa508c30',
+                // 'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
                 // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
@@ -177,8 +177,8 @@ class MayLike extends HTMLElement {
             const options = {
                 method: 'GET',
                 headers: {
-                    // 'X-RapidAPI-Key': '8b10b3432fmsh1d870176f64ffffp1e8efbjsnad29e1f1b690',
-                    // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                    'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
+                    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
                 }
             };
             const response = await fetch(url, options);
@@ -208,21 +208,17 @@ class MayLike extends HTMLElement {
             let templates = '';
             allSongs.forEach(track => {
                 const trackData = track.data;
-                // Primera URL de la portada del álbum
                 const primeraUrl = trackData.albumOfTrack.coverArt.sources[0].url;
-                // Nombre de la canción
                 const nombre = trackData.name;
-                // Nombre del artista
                 const artista = trackData.artists.items.map(artist => artist.profile.name).join(', ');
-                // Duración de la canción en milisegundos
                 const durationMs = trackData.duration.totalMilliseconds;
-                // Convertir a minutos y segundos
                 const minutes = Math.floor(durationMs / 60000);
                 const seconds = Math.floor((durationMs % 60000) / 1000).toString().padStart(2, '0');
+                const trackUri = trackData.uri; // URI de la canción
 
                 templates += `
                 <div class="left_youMayLikeListBoxes">
-                    <div class="left_youMayLikeListImg">
+                    <div class="left_youMayLikeListImg" data-uri="${trackUri}">
                         <img src="${primeraUrl}" alt="list">
                     </div>
                     <div class="left_youMayLikeListDescription">
@@ -240,6 +236,17 @@ class MayLike extends HTMLElement {
                 console.log('No se encontraron canciones para los géneros seleccionados');
             }
             this.innerHTML = templates;
+
+            this.querySelectorAll('.left_youMayLikeListImg').forEach(imgDiv => {
+                imgDiv.addEventListener('click', (event) => {
+                    const trackUri = event.currentTarget.getAttribute('data-uri');
+                    const myFrame = document.querySelector('my-frame');
+                    if (myFrame) {
+                        myFrame.setAttribute('uri', trackUri);
+                    }
+                });
+            });
+
         } catch (error) {
             console.error(error);
         }
