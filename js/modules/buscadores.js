@@ -207,8 +207,8 @@ class TrackSearch extends HTMLElement {
     const options = {
         method: 'GET',
         headers: {
-          // 'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
-          // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+          'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
+          'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
 
@@ -218,6 +218,7 @@ class TrackSearch extends HTMLElement {
             throw new Error(`HTTP error ${response.status}`);
         }
         const result = await response.json();
+        console.log('API Result:', result); // Verifica los resultados de la API
         const tracks = result.tracks.items;
         if (tracks.length > 0) {
             const track = tracks[0].data;
@@ -230,10 +231,11 @@ class TrackSearch extends HTMLElement {
             alert('No se encontraron resultados para la búsqueda');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error:', error);
         alert('Error al obtener los resultados de la búsqueda');
     }
-}
+  }
+
 
       updateTrackList(tracks) {
         const trackList = document.querySelector('track-list');

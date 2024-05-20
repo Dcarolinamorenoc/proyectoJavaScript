@@ -44,7 +44,7 @@ body{
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    height: 726px;
+    height: 826px;
 }
 
 .titulomusic{
@@ -522,7 +522,7 @@ main{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: center;
-    height: 82%; 
+    height: 90%; 
 }
 
 .frame__box{
@@ -583,7 +583,7 @@ main{
     border-radius: 1rem;
     background-color: var(--color2);
     /* padding-left: 2rem; */
-    height: 82%;
+    height: 90%;
   
 }
 /* titulo */
