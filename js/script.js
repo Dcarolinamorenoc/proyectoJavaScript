@@ -6,6 +6,7 @@ const main = document.querySelectorAll('.main');
 const cancion = document.querySelectorAll('.cancion');
 const albumGaleria = document.querySelectorAll('.albumGaleria');
 const centro = document.querySelectorAll('.centro');
+const iconoContainer = document.querySelectorAll('.icono-container');
 
 // Verificar el estado inicial del modo oscuro
 if (body.style.background === 'black') {
@@ -53,42 +54,47 @@ toggle.addEventListener('click', function(){
             centroElement.style.color = 'white';
             centroElement.style.transition = '2s';
         });
+        iconoContainer.forEach(icono => {
+            icono.style.background = '#336344'; // Verde en modo oscuro
+            icono.style.transition = '2s';
+        });
     } else {
         body.style.background = 'white';
         body.style.color = 'black';
         body.style.transition = '2s';
         albumDescubrir.forEach(album => {
             album.style.background = '#64B25E';
-            album.style.color = 'black';
+            album.style.color = 'white';
             album.style.transition = '2s';
         });
         albumTalVezTeGuste.forEach(album => {
             album.style.background = '#64B25E';
-            album.style.color = 'black';
+            album.style.color = 'white';
             album.style.transition = '2s';
         });
         main.forEach(mainElement => {
             mainElement.style.background = '#64B25E'; 
-            mainElement.style.color = 'black';
+            mainElement.style.color = 'white';
             mainElement.style.transition = '2s';
         });
         cancion.forEach(cancionElement => {
             cancionElement.style.background = '#64B25E';
-            cancionElement.style.color = 'black';
+            cancionElement.style.color = 'white';
             cancionElement.style.transition = '2s';
         });
         albumGaleria.forEach(albumGaleria => {
             albumGaleria.style.background = '#64B25E';
-            albumGaleria.style.color = 'black';
+            albumGaleria.style.color = 'white';
             albumGaleria.style.transition = '2s';
         });
         centro.forEach(centroElement => {
             centroElement.style.background = '#64B25E';
-            centroElement.style.color = 'black';
+            centroElement.style.color = 'white';
             centroElement.style.transition = '2s';
+        });
+        iconoContainer.forEach(icono => {
+            icono.style.background = 'black'; // Blanco en modo claro
+            icono.style.transition = '2s';
         });
     }
 });
-
-
-

@@ -25,6 +25,7 @@ body{
 .album{
     display: flex;
     flex-direction: column;
+
     /* gap: 0.7rem; */
     padding: 0.5rem;
     width: 100%;
@@ -44,7 +45,7 @@ body{
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    height: 800px;
+    height: 47.5rem;
 }
 
 .titulomusic{
@@ -61,11 +62,13 @@ body{
 }
 
 .titulonew{
-  margin-top: -60px;
+  margin-top: -15%;
+
 
 }
 .albumDescubrir .titulomusic h1 {
   font-size: 45px; /* Tamaño del título "Discover" */
+margin-bottom: 25px;
 }
 
 .albumDescubrir .titulonew h1 {
@@ -392,7 +395,7 @@ body{
     padding-right: 2rem;
     font-size: x-large;
     margin-top: -15px;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 0.5%;
     justify-content: space-between;
 }
@@ -522,7 +525,7 @@ main{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     justify-content: center;
-    height: 86%; 
+    height: 47.5rem; 
 }
 
 .frame__box{
@@ -583,7 +586,7 @@ main{
     border-radius: 1rem;
     background-color: var(--color2);
     /* padding-left: 2rem; */
-    height: 86%;
+    height: 47.5rem;
   
 }
 /* titulo */
@@ -1140,3 +1143,529 @@ main{
   padding: 0.4rem;
   cursor: pointer;
 } */
+
+
+.menu__mobile{
+  display: none;
+}
+
+.icono-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  background-color: #336344;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 60px;
+  margin-top: -10%;
+  border-radius: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+  body {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    border: 1px solid red;
+    height: 100%;
+}
+
+.album{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(0, 255, 106);
+  /* gap: 0.7rem; */
+  width: 100vw;
+  position: absolute;
+}
+
+/* Apartado de busqueda y titulo */
+.albumDescubrir {
+  background-color: var(--color2);
+  width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: -3px;
+  font-family: "Mukta", sans-serif;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  height: 47.5rem;
+}
+
+.titulomusic{
+margin-top: -30px;
+height: 110px;
+}
+
+
+.titulomusic h1 {
+margin-bottom: 0;
+}
+.titulomusic br {
+display: block; /* Cambia el br a bloque */
+margin-top: 60px; /* Reduce el margen superior del br */
+}
+
+.titulonew{
+margin-top: -60px;
+}
+.albumDescubrir .titulomusic h1 {
+font-size: 45px; /* Tamaño del título "Discover" */
+}
+
+.albumDescubrir .titulonew h1 {
+font-size: 45px; /* Tamaño del título "New Music" */
+}
+
+
+.albumDescubrir h1{
+  font-size: xx-large;    
+  color: var(--color3)
+  
+}
+
+
+.albumBuscar{
+  display: flex;
+  /* border: 1px solid red; */
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+ 
+}
+
+/* ------------- Componente del input ---------------- */
+
+.input {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+}
+
+.input:focus {
+  animation: rotateShadow 2s infinite linear;
+}
+
+@keyframes rotateShadow {
+  0% {
+    box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
+  }
+  25% {
+    box-shadow: -2px 2px 8px 1px #66d88c, 2px -2px 8px 1px #2b682e;
+  }
+  50% {
+    box-shadow: 2px 2px 8px 1px #66d88c, -2px -2px 8px 1px #2b682e;
+  }
+  75% {
+    box-shadow: 2px -2px 8px 1px #66d88c, -2px 2px 8px 1px #2b682e;
+  }
+  100% {
+    box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
+  }
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid purple;
+  height: 35px;
+  margin-top: -20px;
+  width: 150%;
+}
+
+
+
+
+
+
+.search__bt {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(42, 42, 45, 1);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.search__bt:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
+
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(42, 42, 45, 1);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
+
+
+/* ----------------------------- Albums parte izquierda ------------------------------ */
+
+.album_box{
+display: flex;
+flex-direction: column;
+overflow-y: scroll;
+overflow-x: hidden;
+height: 30vh;
+margin-top: -600px;
+width: 100%;
+}
+
+.album_mainBox{
+display: flex;
+flex-direction: row;
+/* border: 1px solid purple; */
+width: 100%;
+justify-content: baseline;
+align-items: center;
+height: 25vh;
+margin-top: 0%;
+}
+
+.album_mainBox:hover{
+cursor: pointer;
+}
+
+.album_images2{
+display: flex;
+flex-direction: row;
+/* border: 1px solid purple; */
+width: 100%;
+justify-content: baseline;
+align-items: center;
+height: 25vh;
+margin-top: 4%;
+}
+
+.album_Content:hover{
+cursor: pointer;
+border-radius: 5%;
+transform: scale(0.95);
+border: 1px solid #66d88c1e;
+}
+
+.album_images2:hover{
+cursor: pointer;
+}
+
+.album_images{
+display: flex;
+flex-direction: row;
+/* border: 1px solid lightblue; */
+justify-content: center;
+align-items: flex-start;
+padding: 0;
+width: 40%;
+height: 25vh;
+margin-left: 6%;
+margin-top:0;
+}
+
+.album_images2{
+display: flex;
+flex-direction: row;
+/* border: 1px solid lightblue; */
+justify-content: center;
+align-items: flex-start;
+padding: 0;
+width: 40%;
+height: 25vh;
+margin-left: 6%;
+margin-top:0;
+}
+
+.album_Content{
+display: flex;
+flex-direction: column;
+overflow: hidden;
+transition: transform 0.3s ease;
+border-radius: 5%;
+}
+
+.album_Content img{
+display: flex;
+width: 100%;
+height: 50%;
+border-radius: 5%;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 0;
+}
+
+.album_Content h2{
+display: inline-block;
+font-size: 100%;
+align-items: center;
+height: 70%;
+width:100%;
+margin-top: 3%;
+text-overflow: ellipsis;
+overflow: hidden;
+max-width: 100%;
+vertical-align: top;
+/* white-space: nowrap; */
+}
+
+
+
+
+/* Top exitos */
+.albumTop{ 
+  display: flex;
+  /* border: 1px solid yellow; */
+  height: 100%;
+  flex-direction: column;
+ background-color: var(--color1);
+ /* padding: 2rem; */
+ border-radius: 1rem;
+ /* gap: 2rem; */
+ color: var(--color3);
+ margin-top: -5%;
+
+ 
+}
+
+.selector {
+--color-letra-oscura: #323232;
+--color-letra-clara: #fff;
+--color-fondo: #fff;
+--color-principal: #323232;
+--color-secundario: #505050;
+position: relative;
+width: 200px;
+height: 30px;
+background-color: var(--color-fondo);
+border: 2px solid var(--color-principal);
+border-radius: 34px;
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-left: -40px;
+margin-right: -60px;
+box-shadow: 4px 4px var(--color-principal);
+}
+
+.opcion {
+margin-right: 5px;
+width: 80.5px;
+height: 25px;
+position: relative;
+top: 2px;
+left: 2px;
+border-radius: 34px;
+transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.opcion:last-child {
+margin-right: 4px;
+}
+
+.opcion:hover {
+background-color: var(--color-secundario);
+}
+
+.opcion:hover .texto {
+color: var(--color-letra-clara);
+}
+
+.entrada {
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;
+appearance: none;
+cursor: pointer;
+}
+
+.boton {
+width: 100%;
+height: 100%;
+border-radius: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.texto {
+color: var(--color-letra-oscura);
+
+}
+
+.entrada:checked + .boton {
+background-color: var(--color-principal);
+transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.entrada:checked + .boton .texto {
+color: var(--color-letra-clara);
+transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+
+
+.albumSubtitulo{
+  display: flex;
+  /* border: 1px solid brown; */
+  flex-direction: row;
+  padding-left: 0rem;
+  padding-right: 2rem;
+  font-size: x-large;
+  margin-top: 5px;
+  margin-top: 30px;
+  margin-left: 0.5%;
+  border: 1px solid blue;
+  justify-content: space-between;
+}
+
+.albumSemana{
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.479);
+}
+
+.albumSemana{
+  display: flex;
+  gap: 1rem;
+}
+
+.albumGaleria{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  margin-top: -250px;
+  flex-direction: column;
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  overflow-y: auto; 
+  /* border: 1px solid red; */
+}
+
+.albumGaleria img {
+width: 150px;
+height: 150px;
+margin-bottom: 10px;
+}
+
+
+.album__songs :nth-child(3){
+color: rgba(255, 255, 255, 0.521)
+
+}
+.album__songs {
+
+transition: padding 0.3s ease;
+
+border-radius: 1rem;
+
+}
+.album__songs:hover{
+background-color: #242424;
+padding: 0.4rem;
+cursor: pointer;
+
+} 
+  
+
+  .menu__mobile{
+    display: none;@media only screen and (max-width: 768px) {
+      .menu__mobile {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        background-color: var(--color2);
+        padding: 20px;
+        border-radius: 2rem;
+        background-color: rgb(74, 110, 74);
+        z-index: 999;
+      }
+    
+      .menu__mobile button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .menu__mobile i {
+        font-size: 2rem;
+        background: transparent;
+        color: var(--color5);
+      }
+    
+      .menu__mobile button:hover {
+        border: 1px solid #fff;
+      }
+    }
+    
+  }
+  
+  .menu__mobile{
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    background-color: var(--color2);
+    padding: 20px;
+    border-radius: 2rem ;
+    background-color: rgb(74, 110, 74);
+    z-index: 999;
+    margin-top: -300px;
+    margin-left: 40px;
+   
+  }
+  .menu__mobile button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .menu__mobile i{
+    font-size: 2rem;
+    background: transparent;
+    color: var(--color5);
+    
+  }
+  .menu__mobile button:hover {
+    border: 1px solid #fff; 
+  }
+
+}

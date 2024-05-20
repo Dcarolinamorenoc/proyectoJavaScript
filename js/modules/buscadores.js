@@ -9,8 +9,8 @@ class SearchSongs extends HTMLElement {
           <style>
           .albumBusquedaPrincipal{
             display: flex;
-            width: 90%;
-            height: 200%;
+            width: 550px;
+            height: 40px;
             margin-top: 0%;
             margin-left: 5%;
           }
