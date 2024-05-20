@@ -16,8 +16,8 @@ class AlbumPictures extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                // 'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
-                // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                'X-RapidAPI-Key': 'e63df90653msh97c3e66fd1d1e8fp10a4d3jsna654e517197b',
+                'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };
 
@@ -177,8 +177,8 @@ class MayLike extends HTMLElement {
             const options = {
                 method: 'GET',
                 headers: {
-                    // 'X-RapidAPI-Key': '659a19a7b5msh73d57d408386845p127656jsnc10854319763',
-                    // 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+                    'X-RapidAPI-Key': 'e63df90653msh97c3e66fd1d1e8fp10a4d3jsna654e517197b',
+                    'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
                 }
             };
             const response = await fetch(url, options);
