@@ -47,6 +47,17 @@ class SearchSongs extends HTMLElement {
               box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
             }
           }
+
+
+          @media screen and (max-width: 768px) {
+            .albumBusquedaPrincipal{
+              display: flex;
+              width: 350px;
+              height: 40px;
+              margin-top: 3%;
+              margin-left: 4%;
+            }
+        }
           </style>
         <div class="albumBusquedaPrincipal">
           <input placeholder="Which song do you want to hear?" class="input" name="text" type="text" />
@@ -77,7 +88,7 @@ class SearchSongs extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'e63df90653msh97c3e66fd1d1e8fp10a4d3jsna654e517197b',
+            'X-RapidAPI-Key': 'e2d5a5cd53msh65b88562e2eed4fp117889jsna111fae32808',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
@@ -195,7 +206,7 @@ class TrackSearch extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'e63df90653msh97c3e66fd1d1e8fp10a4d3jsna654e517197b',
+            'X-RapidAPI-Key': 'e2d5a5cd53msh65b88562e2eed4fp117889jsna111fae32808',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
