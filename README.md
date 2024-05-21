@@ -7,6 +7,8 @@
 ![](https://github.com/Dcarolinamorenoc/proyectoJavaScript/blob/main/storage/img/dise.png)
 
 
+----------------------------------------------------------------------------------
+
 ## Videos de Prueba
 
 Video Computador:
@@ -34,3 +36,6 @@ _________________________________________________________________________
 *En esta segunda columna se cuenta con un buscador que sirve para traer la primera cancion relacionada al titulo dandole enter.
 
 *En la tercera columna contamos con un buscador que nos mostrara las canciones relacionadas dandole enter y este mostrara mas canciones y para colocarlas en la segunda columna debes darle a la imagen de la cancion.
+
+
+----------------------------------------------------------------------------------
