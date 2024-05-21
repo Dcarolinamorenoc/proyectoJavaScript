@@ -17,3 +17,20 @@ Video Computador:
 Video Celular:
 
 [![Alt text](https://img.youtube.com/vi/ypfYU9duj1o/0.jpg)](https://www.youtube.com/watch?v=ypfYU9duj1o)
+
+_________________________________________________________________________
+
+
+## Especificaciones del uso de la pagina 
+
+*En el apartado de Top-Chart se cargaran los albums que inician por predeterminado y los que el usuario indique en el buscador dandole enter.
+
+*El album escogido por el usuario se mostrara en la segunda columna y las canciones que contiene dicho album se mostraran en Playing next.
+
+*En la parte de You May Like se cargaran canciones aleatorias cada vez que la pagina se reinicie y para colocar la cancion en la mitad (segunda columna) se debe dar click en la imagen de la cancion.
+
+*En la segunda columna es donde iran cargando Albums y canciones .
+
+*En esta segunda columna se cuenta con un buscador que sirve para traer la primera cancion relacionada al titulo dandole enter.
+
+*En la tercera columna contamos con un buscador que nos mostrara las canciones relacionadas dandole enter y este mostrara mas canciones y para colocarlas en la segunda columna debes darle a la imagen de la cancion.
