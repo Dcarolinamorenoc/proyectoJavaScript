@@ -88,7 +88,7 @@ class SearchSongs extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'e2d5a5cd53msh65b88562e2eed4fp117889jsna111fae32808',
+            'X-RapidAPI-Key': '350dabce86msh4e4aaff65c18d9fp1c9b11jsncc82137ee429',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };
@@ -175,6 +175,16 @@ class TrackSearch extends HTMLElement {
           box-shadow: -2px -2px 8px 1px #66d88c, 2px 2px 8px 1px #2b682e;
         }
       }
+
+      @media screen and (max-width: 768px) {
+        .cancionBuscar{
+          display: flex;
+          width: 350px;
+          height: 40px;
+          margin-top: 4%;
+          margin-left: 0%;
+        }
+    }
     </style>
     <div class="cancionBuscar">
       <input placeholder="Which song do you want to hear?" class="input" name="text" type="text" />
@@ -206,7 +216,7 @@ class TrackSearch extends HTMLElement {
       const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': 'e2d5a5cd53msh65b88562e2eed4fp117889jsna111fae32808',
+            'X-RapidAPI-Key': '350dabce86msh4e4aaff65c18d9fp1c9b11jsncc82137ee429',
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
           }
       };

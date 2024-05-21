@@ -24,7 +24,7 @@ class SongsTracklist extends HTMLElement {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'e63df90653msh97c3e66fd1d1e8fp10a4d3jsna654e517197b',
+                'X-RapidAPI-Key': '350dabce86msh4e4aaff65c18d9fp1c9b11jsncc82137ee429',
                 'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
             }
         };

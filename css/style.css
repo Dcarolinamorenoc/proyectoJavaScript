@@ -1180,9 +1180,9 @@ main{
 .album{
   display: flex;
   flex-direction: column;
-  /* border: 1px solid rgb(0, 255, 106); */
+  /* border: 4px solid rgb(0, 255, 106); */
   /* gap: 0.7rem; */
-  width: 100vw;
+  width: auto;
   height: 100%;
   position: absolute;
   padding: 0;
@@ -1803,6 +1803,178 @@ main{
   justify-content: center;
   align-items: center;
   margin-top: 10%;
+}
+
+.icono-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  background-color: #385842;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 60px;
+  margin-top: -11%;
+  margin-bottom: 0px;
+}
+
+.cancion{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: var(--color2);
+  /* padding-left: 2rem; */
+  height: 94vh;
+  margin-left: -3%;
+  margin-top: -3%;
+}
+
+.cancionEncabezado{
+  padding-top: 2rem;
+  padding-left: 2rem;
+  margin-top: -25px;
+}
+
+.cancionEncabezado h3{
+  font-size: 35px;
+
+}
+.cancionEncabezado h5{
+  padding-top: 2rem;
+  
+}
+
+.cancionReproduciendoSiguiente{
+  padding-left: 2rem;
+  font-size: large;
+  margin-top: 20px;
+}
+
+.cancionReproduciendoSiguiente h5{
+font-size: 20px;
+}
+
+.trackBase{
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 21rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.trackListBoxes{
+  display: flex;
+  /* border: 1px solid palevioletred; */
+  width: 90%;
+  height: 8vh;
+  gap: 4%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 20%;
+}
+
+.trackListBoxes:hover{
+  cursor: pointer;
+}
+
+.trackListImg{
+  display: flex;
+  /* border: 1px solid red; */
+  width: 8vh;
+  height: 100%; 
+}
+
+.trackListImg img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%; 
+  transition: transform 0.3s ease;
+}
+
+.trackListImg img:hover{
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+
+.trackListDescription{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid brown; */
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.trackListDescription h3{
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+  justify-content: center;
+  /* width: 100%; */
+  height: 3vh;
+  margin: 0;
+  padding: 0;
+  font-size: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.trackListDescription p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 3vh;
+  font-size: 90%;
+  margin: 0;
+  padding: 0;
+  margin-top: -3%;
+}
+
+
+.trackListTime{
+  display: flex;
+  /* border: 1px solid blue; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  margin-left: 4%;
+}
+
+.trackListTime h3{
+  width: 100%;
+  height: 3vh;
+  /* border: 1px solid orange; */
+  justify-content: flex-end;
+  text-align: end;
+  align-items: flex-end;
+  font-size: 140%;
+  margin: 0;
+  margin-right: 0;
+}
+
+.trackListTime p{
+  display: flex;
+  /* border: 1px solid orange; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 3vh;
+  font-size: 90%;
+  margin-top: -3%;
+  margin: 0;
 }
 
 .menu__mobile{
